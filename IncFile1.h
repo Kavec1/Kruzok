@@ -9,10 +9,10 @@
 
 #define nula	0b11000000
 #define jedna	0b11111001
-#define dva		0b10100100
-#define tri		0b10110000
+#define dva	0b10100100
+#define tri	0b10110000
 #define styri	0b10011001
-#define pat		0b10010010
+#define pat	0b10010010
 #define sest	0b10000010
 #define sedem	0b11111000
 #define osem	0b10000000
