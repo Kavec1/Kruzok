@@ -2,7 +2,7 @@
 #define init_H_
 
 #ifndef F_CPU
-#define F_CPU	8000000UL	//definicia frekvencie CPU
+#define F_CPU	1000000UL	//definicia frekvencie CPU
 #endif
 
 #include <avr/io.h>

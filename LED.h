@@ -4,28 +4,17 @@
 #define sbi(x,y) x |= _BV(y)	//set bit- nastavenie bitu
 #define cbi(x,y) x &= (~(_BV(y)))	//clear bit - nulovanie bitu
 #define tbi(x,y) x ^=_BV(y)		//toggle bit - zmena bitu
-void setLED(char x,int y)
 
-void setLED(char x,int y)
-{
-	switch(x)
-    {
-        case 'PA':
-            DDRA |=(1<<xy);
-            break;
+void setLED(char x,int y);
 
-        case 'PB':
-            DDRB |=(1<<xy);
-            break;
+//Funkcia na nastavenie stavu LEDky
+/* 
+    port - A, B, C, D
+    pin - cislo od 0 po 7
+    status - 0 = vypnuta, 1 = zapnuta, 2 = zmen stav zo zapnutej na vypnutu a vice versa
+*/
+short led_state(char port, short pin, short status);
 
-        case 'PC':
-            DDRC |=(1<<xy);
-            break;
 
-        case 'PD':
-            DDRD |=(1<<xy);
-            break;       
-    }
-}
 
 #endif /* LED_H_ */
