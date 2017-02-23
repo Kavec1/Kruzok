@@ -2,7 +2,7 @@
 #define init_H_
 
 #ifndef F_CPU
-#define F_CPU	1000000UL	//definicia frekvencie CPU
+#define F_CPU	800000UL	//definicia frekvencie CPU defaultne to je 8000000 le y-robot to ma zmenene teda ja som sa tak docital. plus na týchto soketoch je kristal s frekvenciou 8.000
 #endif
 
 #include <avr/io.h>
