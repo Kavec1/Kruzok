@@ -1,3 +1,6 @@
+#include "LED.h"
+#include "init.h"
+
 void setLED(char x,int y)
 {
 	switch(x)
@@ -88,4 +91,6 @@ short led_state(char port, short pin, short status)
 			}
 			break;
 	}
+
+	return 1; //toto sa moze upravit na returnovanie viacerych veci a error handling
 }

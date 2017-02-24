@@ -1,6 +1,8 @@
 #ifndef LED_H_
 #define LED_H_
 
+#include "init.h"
+
 #define sbi(x,y) x |= _BV(y)	//set bit- nastavenie bitu
 #define cbi(x,y) x &= (~(_BV(y)))	//clear bit - nulovanie bitu
 #define tbi(x,y) x ^=_BV(y)		//toggle bit - zmena bitu
