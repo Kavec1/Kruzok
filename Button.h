@@ -3,8 +3,8 @@
 
 #define is_high(y) (PINB & _BV(y) == _BV(y)) //=nestlačené kontrola, ci je nastaveny y-ty bit registra 'x'
 #define is_low(y) ((PINB & _BV(y)) != _BV(y)) //=stlačené kontrola, ci je vstupny pin nastaveny na logicku nulu
-void setBUT(char x,int,y)  
-int
+void setBUT(char x,int,y);  
+int BUT_state();
   
 void setBut(char x,int y)
 {
@@ -31,12 +31,15 @@ void setBut(char x,int y)
             break;       
     }
 }
-if (is_low(PB2/3)
+int BUT_state()
 {
-	if (is_high(PB2/3))
-	{
-		príkaz
-	}
+  if (is_low(PB2/3)
+  {
+     if (is_high(PB2/3))
+	  {
+		 return 1;
+	  }
+  }
+  return 0;
 }
-
 #endif /* Button_H_ */
