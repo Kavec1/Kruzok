@@ -9,24 +9,24 @@ void setBut(char x,int y)
 {
 	switch(x)
     {
-        case 'PA':
-            DDRA |=(0<<xy);
-            PORTA |=(1<<xy);
+        case 'A':
+            DDRA |=(0<<y);
+            PORTA |=(1<<y);
             break;
 
-        case 'PB':
-            DDRB |=(0<<xy);
-            PORTB |=(1<<xy);
+        case 'B':
+            DDRB |=(0<<y);
+            PORTB |=(1<<y);
             break;
 
-        case 'PC':
-            DDRC |=(0<<xy);
-            PORTC |=(1<<xy);
+        case 'C':
+            DDRC |=(0<<y);
+            PORTC |=(1<<y);
             break;
 
-        case 'PD':
-            DDRD |=(0<<xy);
-            PORTD |=(1<<xy);
+        case 'D':
+            DDRD |=(0<<y);
+            PORTD |=(1<<y);
             break;       
     }
 }
