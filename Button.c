@@ -1,5 +1,5 @@
 #include "Button.h"
-void setButton(char port,int pin)
+void setButton(char port,short pin)
 {
 	switch(port)
 	{
@@ -24,7 +24,7 @@ void setButton(char port,int pin)
 		break;
 	}
 }
-int Pin_state(char x,int y)
+int Pin_state(char x,short y)
 {
 	switch (x)
 	{
