@@ -26,6 +26,7 @@ void setButton(char port,short pin)
 }
 int Pin_state(char x,short y)
 {
+	setButton(x,y);
 	switch (x)
 	{
 		case 'A':
