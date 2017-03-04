@@ -7,8 +7,6 @@
 #define cbi(x,y) x &= (~(_BV(y)))	//clear bit - nulovanie bitu
 #define tbi(x,y) x ^=_BV(y)		//toggle bit - zmena bitu
 
-void setLED(char x,int y);
-
 //Funkcia na nastavenie stavu LEDky
 /* 
     port - A, B, C, D
