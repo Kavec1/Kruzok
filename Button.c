@@ -1,3 +1,4 @@
+#include "Button.h"
 void setButton(char port,int pin)
 {
 	switch(port)
@@ -36,25 +37,25 @@ int Pin_state(char x,int y)
 		break;
 		
 		case 'B':
-		while((PINB & _BV(1))!=_BV(1));
+		while((PINB & _BV(y))!=_BV(y));
 		_delay_ms(2);
-		while((PINB & _BV(1))==_BV(1));
+		while((PINB & _BV(y))==_BV(y));
 		_delay_ms(2);
 		return 1;
 		break;
 		
 		case 'C':
-		while((PINC & _BV(1))!=_BV(1));
+		while((PINC & _BV(y))!=_BV(y));
 		_delay_ms(2);
-		while((PINC & _BV(1))==_BV(1));
+		while((PINC & _BV(y))==_BV(y));
 		_delay_ms(2);
 		return 1;
 		break;
 		
 		case 'D':
-		while((PIND & _BV(1))!=_BV(1));
+		while((PIND & _BV(y))!=_BV(y));
 		_delay_ms(2);
-		while((PIND & _BV(1))==_BV(1));
+		while((PIND & _BV(y))==_BV(y));
 		_delay_ms(2);
 		return 1;
 		break;		
