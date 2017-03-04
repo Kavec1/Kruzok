@@ -1,28 +1,6 @@
 #include "LED.h"
 #include "init.h"
 
-void setLED(char x,int y)
-{
-	switch(x)
-	{
-		case 'A':
-			DDRA |=(1<<y);
-			break;
-
-		case 'B':
-			DDRB |=(1<<y);
-			break;
-
-		case 'C':
-			DDRC |=(1<<y);
-			break;
-
-		case 'D':
-			DDRD |=(1<<y);
-			break;
-	}
-}
-
 void led_state(char port, short pin, short status)
 {
 	switch(port)
@@ -91,6 +69,4 @@ void led_state(char port, short pin, short status)
 			}
 			break;
 	}
-
-	//return 0; //toto sa moze upravit na returnovanie viacerych veci a error handling
 }
