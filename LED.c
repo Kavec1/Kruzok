@@ -1,6 +1,28 @@
 #include "LED.h"
 #include "init.h"
 
+void set_ddr(volatile uint8_t * ddr, uint8_t pin, short state){
+	if(state){
+		*ddr |= 1<<pin;
+	}else{
+		*ddr &= ~(1<<pin);
+	}
+}
+
+void led_state(volatile uint8_t * port, uint8_t pin, short state){
+	switch(state){
+		case 0:
+			*port &= ~(1<<pin);
+			break;
+		case 1:
+			*port |= 1<<pin;
+			break;
+		case 2:
+			*port ^= 1<<pin;
+			break;
+	}
+}
+
 void led_state(char port, short pin, short status)
 {
 	switch(port)
