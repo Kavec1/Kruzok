@@ -1,29 +1,7 @@
 #include "LED.h"
 #include "init.h"
 
-void setLED(char x,int y)
-{
-	switch(x)
-	{
-		case 'A':
-			DDRA |=(1<<y);
-			break;
-
-		case 'B':
-			DDRB |=(1<<y);
-			break;
-
-		case 'C':
-			DDRC |=(1<<y);
-			break;
-
-		case 'D':
-			DDRD |=(1<<y);
-			break;
-	}
-}
-
-short led_state(char port, short pin, short status)
+void led_state(char port, short pin, short status)
 {
 	switch(port)
 	{
@@ -35,10 +13,10 @@ short led_state(char port, short pin, short status)
 					PORTA &= ~(1<<pin);
 					break;
 				case 1:
-					PORTA |= 1<<pin;
+					PORTA |= (1<<pin);
 					break;
 				case 2:
-					PORTA ^= 1<<pin;
+					PORTA ^= (1<<pin);
 					break;
 			}
 			break;
@@ -51,10 +29,10 @@ short led_state(char port, short pin, short status)
 					PORTB &= ~(1<<pin);
 					break;
 				case 1:
-					PORTB |= 1<<pin;
+					PORTB |= (1<<pin);
 					break;
 				case 2:
-					PORTB ^= 1<<pin;
+					PORTB ^= (1<<pin);
 					break;
 			}
 			break;
@@ -67,10 +45,10 @@ short led_state(char port, short pin, short status)
 					PORTC &= ~(1<<pin);
 					break;
 				case 1:
-					PORTC |= 1<<pin;
+					PORTC |= (1<<pin);
 					break;
 				case 2:
-					PORTC ^= 1<<pin;
+					PORTC ^= (1<<pin);
 					break;
 			}
 			break;
@@ -83,14 +61,12 @@ short led_state(char port, short pin, short status)
 					PORTD &= ~(1<<pin);
 					break;
 				case 1:
-					PORTD |= 1<<pin;
+					PORTD |= (1<<pin);
 					break;
 				case 2:
-					PORTD ^= 1<<pin;
+					PORTD ^= (1<<pin);
 					break;
 			}
 			break;
 	}
-
-	return 1; //toto sa moze upravit na returnovanie viacerych veci a error handling
 }
