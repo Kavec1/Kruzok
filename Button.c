@@ -135,3 +135,5 @@ short button_state_port(volatile uint8_t * port, uint8_t pin, short debounce){
 	
 
 }
+
+//PA0 nefunguje
