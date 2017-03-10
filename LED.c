@@ -9,7 +9,7 @@ void set_ddr(volatile uint8_t * ddr, uint8_t pin, short state){
 	}
 }
 
-void led_state(volatile uint8_t * port, uint8_t pin, short state){
+void led_state_port(volatile uint8_t * port, uint8_t pin, short state){
 	switch(state){
 		case 0:
 			*port &= ~(1<<pin);

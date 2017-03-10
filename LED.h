@@ -14,7 +14,7 @@
     status - 0 = vypnuta, 1 = zapnuta, 2 = zmen stav zo zapnutej na vypnutu a vice versa
 */
 void led_state(char port, short pin, short status);
-void led_state(volatile uint8_t * port, uint8_t pin, short state);
+void led_state_port(volatile uint8_t * port, uint8_t pin, short state);
 void set_ddr(volatile uint8_t * ddr, uint8_t pin, short state);
 
 

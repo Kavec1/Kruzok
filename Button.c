@@ -122,14 +122,6 @@ short button_state(char port, uint8_t pin, short debounce){
 	return -1;
 }
 
-void set_ddr(volatile uint8_t * ddr, uint8_t pin, short state){
-	if(state){
-		*ddr |= 1<<pin;
-	}else{
-		*ddr &= ~(1<<pin);
-	}
-}
-
 short button_state_port(volatile uint8_t * port, uint8_t pin, short debounce){
 	if(*port & (1<<pin)){
 		if(debounce)
