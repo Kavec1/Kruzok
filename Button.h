@@ -10,7 +10,6 @@
 void setButton(char port,short pin);
 int Pin_state(char x,short y);
 short button_state(char port, uint8_t pin, short debounce);
-void set_ddr(volatile uint8_t * ddr, uint8_t pin, short state);
 short button_state_port(volatile uint8_t * port, uint8_t pin, short debounce);
 
 
