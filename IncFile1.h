@@ -41,6 +41,7 @@ void rightMotor(int, int);
 void leftMotor(int, int);
 void stop();
 void setUSART(void);
+void delay(int ms);
 int USART_send_1byte(char u8data);
 int USART_receive_1byte(void);
 void zobraz_7SEG(unsigned char zob);
@@ -178,6 +179,11 @@ uint8_t prevod()
 	ADCSRA |=(1<<ADSC); //start prevodu
 	while((ADCSRA & (1<<ADIF)) == 0){};
 	return(ADCH);
+}
+void delay(int ms) {
+	for(int i = 0 ; i < ms ; i ++) {
+		_delay_ms(1);
+	}
 }
 /*Button
 if (is_low(PB2/3)
